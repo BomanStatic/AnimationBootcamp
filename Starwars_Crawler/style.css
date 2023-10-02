@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@700&display=swap");
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "News Cycle", sans-serif;
+    background-image: url("/img/Star_Wars.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    perspective: 500px;
+    color: yellow;
+    overflow: hidden;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 5rem;
+}
+h3 {
+    font-size: 3rem;
+}
+p {
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    transform-style: preserve-3d;
+    width: 50rem;
+    margin-inline: auto;
+    animation: crawl 45s linear;
+    transform: rotateX(85deg) translate(0, -50%);
+}
+@keyframes crawl {
+    0% {
+        transform: rotateX(85deg) translate(0, 120%);
+    }
+    100% {
+        transform: rotateX(85deg) translate(0, -50%);
+    }
+}
